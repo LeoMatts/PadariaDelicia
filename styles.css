@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+
+
+
+:root {
+    --branco: #ffffff;
+    --bege: #F8F4E1;
+    --marrom: #74512D;
+    --marrom-claro: #c4a07c;
+    --marrom-escuro: #251605;
+    --preto: #000000;
+
+
+    --fonte-destaque: "Sevillana", cursive;
+}
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bege);
+}
+
+header {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-family: var(--fonte-destaque);
+    margin: 0;
+    color: var(--marrom-claro);
+}
+header a{
+text-decoration: none;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--marrom-claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+section .container {
+    color: var(--preto);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
+}
+
+#home {
+    background: url('issues/side-view-kid-decorating-cake.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 20em;
+    color: var(--branco);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#home p {
+    font-size: 1.2em;
+}
+
+#about,
+#contact {
+    text-align: center;
+}
+
+#products .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#products .product-item {
+    background: var(--branco);
+    border: 1px solid var(--bege);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#products .product-item img {
+    width: 100%;
+    height: auto;
+}
+
+#products .product-item h3 {
+    margin: 10px 0;
+}
+#products .product-item a{
+    text-decoration: none;
+    color: var(--preto);
+}
+footer {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    padding: 0 20px;
+    margin: 3em 0 2em 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #products .product-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 2em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    #products .product-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    header .container {
+        padding: 0 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    section .container {
+        padding: 15px;
+    }
+
+    #home {
+        padding: 60px 10px;
+    }
+
+    #home h2 {
+        font-size: 1.5em;
+    }
+
+    #home p {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 10px 10px;
+    }
+}
