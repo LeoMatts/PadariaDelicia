@@ -8,7 +8,8 @@
     --bege: #F8F4E1;
     --marrom: #74512D;
     --marrom-claro: #c4a07c;
-    --marrom-escuro: #251605;
+    --marrom-escuro: #4D2D1F;
+    --marrom-escuro-media: #573224;
     --preto: #000000;
 
 
@@ -44,9 +45,11 @@ header h1 {
     margin: 0;
     color: var(--marrom-claro);
 }
-header a{
-text-decoration: none;
+
+header a {
+    text-decoration: none;
 }
+
 header nav ul {
     list-style: none;
     margin: 0;
@@ -78,25 +81,15 @@ section .container {
 }
 
 #home {
-    background: url('issues/side-view-kid-decorating-cake.jpg');
+    background: url('issues/freepik-export-20240604002817ng3b.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 20em;
-    color: var(--branco);
+    height: 24em;
     text-align: center;
     padding: 100px 20px;
 }
 
-#home h2 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-#home p {
-    font-size: 1.2em;
-}
 
 #about,
 #contact {
@@ -128,10 +121,12 @@ section .container {
 #products .product-item h3 {
     margin: 10px 0;
 }
-#products .product-item a{
+
+#products .product-item a {
     text-decoration: none;
     color: var(--preto);
 }
+
 footer {
     background-color: var(--marrom-escuro);
     color: var(--branco);
@@ -141,7 +136,7 @@ footer {
 
 footer .container {
     padding: 0 20px;
-    margin: 3em 0 2em 0;
+    margin: 3em 0 3em 0;
 }
 
 /* Estilos responsivos */
@@ -166,13 +161,6 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-    #home h2 {
-        font-size: 2em;
-    }
-
-    #home p {
-        font-size: 1em;
-    }
 
     #products .product-item {
         width: 100%;
@@ -182,6 +170,11 @@ footer .container {
 @media (max-width: 480px) {
     header {
         text-align: center;
+        background-color: var(--marrom-escuro-media);
+    }
+
+    header h1 {
+        display: none;
     }
 
     header .container {
@@ -189,12 +182,12 @@ footer .container {
     }
 
     header nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     header nav ul li {
-        margin: 5px 0;
+        margin: 5px 10px;
     }
 
     section {
@@ -207,15 +200,10 @@ footer .container {
 
     #home {
         padding: 60px 10px;
+        height: 10em;
+        zoom: 1.4;
     }
 
-    #home h2 {
-        font-size: 1.5em;
-    }
-
-    #home p {
-        font-size: 0.9em;
-    }
 
     footer {
         padding: 10px 10px;
